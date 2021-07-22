@@ -1,0 +1,21 @@
+<!-- Basic JavaScript-rendered Hello World -->
+<body>
+  <script type="module">
+
+    const root = document.createElement('div');
+
+    /* TIL: We can access to elements attributes and make updates with element.attribute 
+      instead of using element.setAttribute.
+
+      To learn more: https://stackoverflow.com/questions/3919291/when-to-use-setattribute-vs-attribute-in-javascript
+    */
+    root.id = 'root';
+    document.body.append(root);
+
+    const container = document.createElement('div');
+    container.textContent = 'Hello World!';
+    container.className = 'container';
+    
+    document.getElementById('root').append(container);
+  </script>
+</body>
