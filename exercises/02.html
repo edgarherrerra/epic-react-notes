@@ -16,8 +16,21 @@
 
     const elementProps = { className: 'container' };
     const elementType = 'div';
+
+    /*
+    SYNTAX:  
+    React.createElement(
+        type,
+        [props],
+        [...children]
+      ) 
+    */
     const reactElement = React.createElement(elementType, elementProps, helloElement, space, worldElement);
 
+    // We can write the same in this way:
+    const elementPropsAlt = { className: 'container', children: [helloElement, space, worldElement] };
+
+    const reactElementAlt = React.createElement(elementType, elementPropsAlt);
 
     ReactDOM.render(reactElement, rootElement);
 
